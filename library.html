@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone - Your Library</title>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png"
+              alt="Spotify Logo"
+            />
+          </a>
+        </div>
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a href="index.html" class="nav-link"
+                ><i class="fa fa-home"></i> Home</a
+              >
+            </li>
+            <li>
+              <a href="search.html" class="nav-link"
+                ><i class="fa fa-search"></i> Search</a
+              >
+            </li>
+            <li>
+              <a href="library.html" class="nav-link active"
+                ><i class="fa fa-book"></i> Your Library</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-plus-square"></i> Create Playlist</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-heart"></i> Liked Songs</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="policies">
+          <ul>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content for Library -->
+      <main class="main-content">
+        <header class="top-bar">
+          <div class="nav-buttons">
+            <button type="button"><i class="fa fa-chevron-left"></i></button>
+            <button type="button"><i class="fa fa-chevron-right"></i></button>
+          </div>
+          <div class="user-profile">
+            <button type="button" class="signup-btn">Sign Up</button>
+            <button type="button" class="login-btn">Log In</button>
+          </div>
+        </header>
+
+        <div class="library-content">
+          <h1>Your Library</h1>
+          <p>
+            This is where your saved playlists and liked songs would appear.
+          </p>
+        </div>
+      </main>
+
+      <!-- Play Bar -->
+      <footer class="play-bar">
+        <!-- The Play Bar is identical and will be controlled by script.js -->
+        <div class="song-info">
+          <img
+            id="song-art"
+            src="assets/images/default-art.png"
+            alt="Album Art"
+          />
+          <div class="song-details">
+            <p id="song-title">Select a song</p>
+            <p id="song-artist">to start listening</p>
+          </div>
+          <i class="far fa-heart"></i>
+        </div>
+        <div class="player-controls">
+          <div class="control-buttons">
+            <button id="prev-btn" title="Previous">
+              <i class="fa fa-step-backward"></i>
+            </button>
+            <button id="play-pause-btn" title="Play">
+              <i class="fa fa-play"></i>
+            </button>
+            <button id="next-btn" title="Next">
+              <i class="fa fa-step-forward"></i>
+            </button>
+          </div>
+          <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input
+              type="range"
+              id="progress"
+              class="progress-bar"
+              value="0"
+              step="1"
+              min="0"
+              max="100"
+            />
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+        <div class="volume-controls">
+          <i class="fa fa-volume-down"></i>
+          <input
+            type="range"
+            id="volume"
+            class="volume-bar"
+            value="100"
+            min="0"
+            max="100"
+          />
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
